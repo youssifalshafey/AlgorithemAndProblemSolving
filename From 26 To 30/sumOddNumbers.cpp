@@ -24,12 +24,12 @@ void printSummitionOfOddNumbers(int N)
     int sum = 0;
     for (int i = 0; i < N; i++)
     {
-        if (checkOddOrEven(i) == oddOrEven::Even)
+        if (checkOddOrEven(i) == oddOrEven::Odd)
         {
             sum += i;
         }
     }
-    cout << "Summition From " << 1 << " To " << N << " Is " << sum;
+    cout << "Summition Is " << sum;
 }
 void printValuesUsingWhileLoop(int N)
 {
@@ -37,11 +37,24 @@ void printValuesUsingWhileLoop(int N)
     int sum = 0;
     while (i < N)
     {
-        i++;
-        if (checkOddOrEven(i) == oddOrEven::Even)
+        if (checkOddOrEven(i) == oddOrEven::Odd)
             sum += i;
+        i++;
     }
-        cout << "Summition Of Using While Loop Is " << sum;
+    cout << "Summition Of Using While Loop Is " << sum;
+}
+void printValuesUsingDoWhileLoop(int N)
+{
+    int i = 0;
+    int sum = 0;
+    do
+    {
+        if (checkOddOrEven(i) == oddOrEven::Odd)
+            sum += i;
+        i++;
+    } while (i < N);
+    
+    cout << "Summition Of Using Do While Loop Is " << sum;
 }
 
 int main()
@@ -49,6 +62,8 @@ int main()
     int N;
     readValueFromUser(N);
     printSummitionOfOddNumbers(N);
-    cout<<"\n********************\n";
+    cout << "\n********************\n";
     printValuesUsingWhileLoop(N);
+    cout << "\n********************\n";
+    printValuesUsingDoWhileLoop(N);
 }
