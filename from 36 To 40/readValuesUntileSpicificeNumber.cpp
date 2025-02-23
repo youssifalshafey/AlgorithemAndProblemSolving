@@ -1,28 +1,31 @@
 #include <iostream>
 using namespace std;
-float readNumber(string message)
+int readNumber(string message)
 {
     float number;
     cout << message;
     cin >> number;
     return number;
 }
-float checkNumber(float number)
+int checkNumber()
 {
-    float sum = 0 ;
-    while (number != -99)
-    {
-     sum+=readNumber("Please Enter Number And Check If True Or Not : ");
-    }
+    int sum = 0  , counter = 1  ,  Number = 0;
+    do{
+        Number =readNumber("Please Enter Number " + to_string(counter) + " :") ;
+        if(Number == -99){
+            break;
+        }
+    counter ++;
+    sum += Number;
+    }while (Number != -99);
     return sum;
 }
-void printResult(float number)
+void printResult(int number)
 {
     cout << "Congratulation You Enter The Right Number ";
     cout << number;
 }
 int main()
 {
-    float number = readNumber("Please Enter Number And Check If True Or Not : ");
-    printResult(checkNumber(number));
+     printResult(checkNumber());  
 }
