@@ -8,10 +8,10 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "${workspace}",
-      "program": "C:/Users/Administrator/Documents/GitHub/AlgorithemAndProblemSolving/From 11 To 15/MaxOfTwoNumbwers.exe",
+      "cwd": "c:/Users/Administrator/Documents/GitHub/AlgorithemAndProblemSolving/problemsFrom 41 To 45",
+      "program": "c:/Users/Administrator/Documents/GitHub/AlgorithemAndProblemSolving/problemsFrom 41 To 45/build/Debug/outDebug",
       "MIMode": "gdb",
-      "miDebuggerPath": "C:/msys64/mingw64/bin/gdb.exe",
+      "miDebuggerPath": "gdb",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",
