@@ -1,5 +1,5 @@
 #include <iostream>
-#include<math.h>
+#include <math.h>
 using namespace std;
 enum enPrimeOrNot
 {
@@ -9,41 +9,44 @@ enum enPrimeOrNot
 int readNumber(string message)
 {
     int number;
-    do{
+    do
+    {
         cout << message;
         cin >> number;
-    }while(number < 0);
+    } while (number < 0);
     return number;
 }
-enPrimeOrNot checkFromTheNumber(int number){
-    int nNumber = round(number / 2) ;
-    for(int i = 2 ; i <= nNumber; i ++){
-        if(number % i == 0 )
+enPrimeOrNot checkFromTheNumber(int number)
+{
+    int nNumber = round(number / 2);
+    for (int i = 2; i <= nNumber; i++)
+    {
+        if (number % i == 0)
             return enPrimeOrNot::notPirme;
-        
     }
-        return enPrimeOrNot::prime;
+    return enPrimeOrNot::prime;
 }
-string checkNumber(enPrimeOrNot enNumber){
+string checkNumber(enPrimeOrNot enNumber)
+{
     switch (enNumber)
     {
-    case enPrimeOrNot::notPirme :
+    case enPrimeOrNot::notPirme:
         return "Not Prime Number ";
         break;
-    case enPrimeOrNot::prime :
+    case enPrimeOrNot::prime:
         return " Prime Number ";
         break;
     default:
-    return 0 ;
+        return 0;
         break;
     }
 }
-void printWholeResult(string Result){
-    cout<<Result;
+void printWholeResult(string Result)
+{
+    cout << Result;
 }
 int main()
 {
 
     printWholeResult(checkNumber(checkFromTheNumber(readNumber("Enter A Positive Number : "))));
-
 }
